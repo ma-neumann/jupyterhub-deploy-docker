@@ -54,6 +54,8 @@ services:
       - secrets/postgres.env
     command: >
       jupyterhub -f /srv/jupyterhub/jupyterhub_config.py
+    labels:
+      - com.centurylinklabs.watchtower.enable=false
 
 volumes:
   data:
